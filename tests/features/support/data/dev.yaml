@@ -1,0 +1,8 @@
+url: 'https://localhost:3000'
+users: 
+   admin:
+      email: 'admin-dev@hotmail.com' 
+      password: '0817guinho'
+   analyst:
+       email: 'analyst-dev@test.com'
+       password: 'teste@123'   

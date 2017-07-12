@@ -1,0 +1,132 @@
+[
+  {
+    "uri": "features/specs/remover_cliente.feature",
+    "id": "remover-cliente",
+    "keyword": "Funcionalidade",
+    "name": "Remover cliente",
+    "description": "   Sendo um usuário do Invoices\n   Posso remover somente os cliente que ainda não possuem fatura",
+    "line": 4,
+    "tags": [
+      {
+        "name": "@delete",
+        "line": 3
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "Cliente deve ser cadastrado",
+        "description": "",
+        "line": 8,
+        "type": "background",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 51358
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10277896011
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "* ",
+            "name": "Cliente cadastrado com sucesso",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/customer_steps.rb:72"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4126057136
+            }
+          }
+        ]
+      },
+      {
+        "id": "remover-cliente;remover-cliente-cadastrado",
+        "keyword": "Cenario",
+        "name": "Remover cliente cadastrado",
+        "description": "",
+        "line": 20,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@delete",
+            "line": 3
+          },
+          {
+            "name": "@customer_page",
+            "line": 19
+          },
+          {
+            "name": "@logout",
+            "line": 19
+          },
+          {
+            "name": "@smoke",
+            "line": 19
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço exclusão desse cliente",
+            "line": 22,
+            "match": {
+              "location": "features/step_definitions/customer_steps.rb:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 594734063
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "esse cliente não deve ser exibido após a busca",
+            "line": 23,
+            "match": {
+              "location": "features/step_definitions/customer_steps.rb:88"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 71134448
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131556
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:19"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "Unable to find css \"#navbar a[href$=logout]\" (Capybara::ElementNotFound)\n./features/pages/pages.rb:25:in `logout'\n./features/support/hooks.rb:21:in `After'",
+              "duration": 5646137935
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

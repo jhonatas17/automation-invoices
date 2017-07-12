@@ -1,0 +1,15 @@
+## YAML Template
+---
+default: --format progress -p html -p qa -p headless
+ci: --format progress -p json -p qa -p headless
+html: --format html --out=results/report.html
+json: --format json --out=results/report.json
+
+### variáveis de ambiente
+qa: ENV_TYPE=qa
+dev: ENV_TYPE=dev
+uat: ENV_TYPE=uat
+chrome: BROWSER=chrome
+firefox: BROWSER=firefox
+ie: BROWSER=ie
+headless: BROWSER=headless 

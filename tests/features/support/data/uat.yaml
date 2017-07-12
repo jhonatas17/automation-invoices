@@ -1,0 +1,8 @@
+url: 'https://ninjainvoices.uat.qaninja.com.br'
+users: 
+   admin:
+      email: 'admin-uat@hotmail.com' 
+      password: 'uat@123'
+   analyst:
+       email: 'analyst-uat@test.com'
+       password: 'teste@123'   
